@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>HW 2: My weBcuBe</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Chakra+Petch:wght@500;600;700&family=Rubik+Glitch&family=Rubik+Pixels&family=Rubik+Vinyl&family=Sedgwick+Ave+Display&family=Silkscreen:wght@400;700&family=Teko:wght@600&display=swap" rel="stylesheet">
+
+  
+  <!-- IMPORT P5.JS FOR GRAPHICS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/p5.min.js" integrity="sha512-pgK6Wo8doipc/IPQ0ilH3b47ww01345nR9ud1/6Qp0n+lQlEW9zuw6JhysRcUpBY4yKuVZjn1MAkDxbnncuGsQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+  <script src="scripts/darkmode.js" async defer></script>
+  <script src="scripts/cube.js" async defer></script>
+  <script src="scripts/pi.js" async defer></script>
+  
+  <!--  HEADER -->
+  <main class="hbg noselect">
+    <div class="maincontainer jcenter acenter  " id="jdiv">
+      <figure class="">
+        <img class="header " src="img/neon_cube.png">
+      </figure> <!-- HEADER IMAGE -->
+      <h1 class="title "><a href="/index.html"><span class="header">&pi;</span>cube<sup>&reg;</sup></a></h1> <!--  TITLE -->
+      <div class="">
+        <div class="container ">
+          <input type="checkbox" class="invis theme_toggle" id="toggle"><label for="toggle" id="ltoggle">
+            <img class="theme" src="img/dark_cubef1.png" title="toggle theme">
+          </label>
+          <h6 class="click">Click^</h6>
+        </div>
+      </div> <!--  BUTTONS -->
+    </div> <!-- OUTER MAIN CONTAINER -->
+  </main>
+
+  <!--  MAIN CHUNK -->
+  <main class="mbg noselect noclick">
+    <div class="maincontainer jcenter acenter tcenter " id="pi_solver">   
+      <h2 class="subtitle dmargin  "> Is it possible for <span id="display_digits"></span> digits of <span class="pi">&pi;</span> to solve a Rubik's cube? </h2>
+       </div>
+    <div class="maincontainer jcenter acenter tcenter " id="">   
+      <h2 class="subtitle dmargin  " id="scramble">Current Scramble: </h2>
+       </div>
+    <div class="maincontainer jcenter acenter tcenter  " id="curr_digit"> 
+      <!--  HEADER FOR PI DIGIT AND MOVE -->
+      <h2 class="subtitle dmargin" id="current">Digit #&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Current Move </h2>
+      </div>
+    <div class="maincontainer jcenter acenter tcenter  " id="curr_digit"> 
+    <!--  GRAB A PI DIGIT AND DISPLAY IT HERE FOR EVERYMOVE DONE. -->
+      <h2 class="subtitle dmargin" id="pi_start"><span class="ends"></span></h2>
+    <h2 class="subtitle dmargin" id="pi_digit"></h2>
+      <h2 class="subtitle dmargin" id="pi_end"><span class="ends">#</span></h2>
+      <h2 class="subtitle dmargin" id="pi_spacer">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</h2>
+      <h2 class="subtitle dmargin" id="move_start"></h2>
+    <h2 class="subtitle dmargin" id="pi_move">-</h2>
+      <h2 class="subtitle dmargin" id="move_ends"></h2>
+    </div>
+    <div id="canvas_holder" class="maincontainer jcenter acenter  "  >
+       </div>
+
+
+  </main>
+
+</body>
+  <footer class="noselect">
+
+    <div>
+      <br>     
+      CST_336 Internet Programming. 2023&copy; Bonavida<br>
+      <strong> Disclaimer:</strong> This website is under construction and is both functional and non-functional, simultaneously. Currently for academic purposes.
+    </div> 
+  </footer>
+
+</html>

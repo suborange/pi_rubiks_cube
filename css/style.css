@@ -1,0 +1,326 @@
+/*   BASE CSS STYLES */
+:root {
+  --color-dark: #22314E;
+  --color-light: #FAF8D9;
+}
+/*  https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently */  
+}
+
+.noclick {
+  pointer-events: none;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: var(--color-light);
+  transition-duration: 0.3s;
+}
+
+main {
+  width: 100%;
+}
+
+main.hbg {
+  /*  for header */
+  
+  background-color: var(--color-light);
+  transition-duration: 0.3s;
+
+}
+
+main.mbg {
+  /* stuff for main  */
+  background-color: var(--color-light);  
+  transition-duration: 0.3s;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-dark);
+  /* transition-duration: 0.3s; */
+}
+
+sup {
+  font-size: .9em;
+  font-family: 'Chakra Petch';
+  font-weight: 700;
+}
+
+footer {
+  text-align: center;
+  color: var(--color-dark);
+  font-size: 1em;
+   font-family: 'Chakra Petch';
+  font-weight: 500;
+
+}
+strong {
+  font-weight: 700;
+}
+form {
+  text-align: center;
+  /* align-items: center; */
+}
+.test {
+  border-radius: 3px;
+  border: 2.5px solid #000000;
+}
+
+.test1 {
+  border-radius: 3px;
+  border: 2.5px solid #c85656;
+}
+
+.test2 {
+  border-radius: 3px;
+  border: 2.5px solid #6160be;
+}
+
+
+.test3 {
+  border-radius: 3px;
+  border: 2.5px solid #37cd80;
+}
+
+div.maincontainer {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+div.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* margin-block-start: 1em;
+  margin-block-end: 1em; */
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+}
+
+figure {
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+}
+
+h1.title {
+  color: var(--color-dark);
+  font-size: 3em;
+  /* font-family: 'Rubik Vinyl'; */
+  /* font-family: 'Rubik Glitch'; */
+  /* font-family: 'Rubik Pixels'; */
+  font-family: 'Silkscreen', sans-serif;
+  text-shadow: 3px 3px 2.7px #ff6f00;
+  /* text-shadow: 2px 2px #5670a4; */
+  /* text-shadow: 2px 2px #b2b08a */
+}
+
+h2.subtitle {
+  color: var(--color-dark);
+  font-size: 1.8em;
+  /* font-family: 'Rubik Vinyl'; */
+  /* font-family: 'Rubik Glitch'; */
+  /* font-family: 'Rubik Glitch'; */
+  font-family: 'Chakra Petch';
+  font-weight: 700;
+   /* text-shadow: 2.3px 2.3px 4px #ff6f00; */
+  text-shadow: 1.5px 1.5px 1.7px  #ff6f00;
+  transition-duration: 0.3s;
+}
+
+h2.validation {
+  color: var(--color-dark);
+  font-size: 1.1em;
+  font-family: 'Chakra Petch';
+  font-weight: 700;
+  text-shadow: 1.6px 1.6px 1.8px  #ff6f00;
+  transition-duration: 0.3s;
+}
+
+h6 {
+  color: var(--color-dark);
+  margin: 0;
+  font-family: 'Chakra Petch';
+  font-weight: 900;
+  font-size: .8em;
+}
+
+span.pi {
+  font-size: 1.42em;
+   font-family: 'Chakra Petch';  
+}
+span.header {
+  font-size: 1.42em;
+}
+span.button {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+span.ends {
+  /*  add some style for digits/moves before and after, add highligt effect to current one */
+  color: #ff6f00;
+  font-size: 0.58em;
+  /* font-family: 'Rubik Vinyl'; */
+  /* font-family: 'Rubik Glitch'; */
+  /* font-family: 'Rubik Glitch'; */
+  font-family: 'Chakra Petch';
+  font-weight: 600;
+   /* text-shadow: 2.3px 2.3px 4px #ff6f00; */
+  text-shadow: 1.4px 1.4px 1.6px var(--color-dark);
+}
+
+
+img.header {
+  height: 100px;
+}
+
+img.theme {
+  width: 50px;
+  /* object-fit: cover; */
+  /* transition-duration: 0.6s; */
+  /* transform: scale(1); */
+}
+
+img.theme:hover {
+  /* transform: scale(1.10); */
+}
+
+img.jview {
+  width: 45px;
+}
+
+
+
+
+/* CUSTOM CSS CLASSES  */
+
+
+.button_shape {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding: 7px 15px;
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 4px 4px #ff6f00;
+  font-size: 1.2em;
+  font-family: 'Silkscreen', sans-serif;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  transform: perspective(1px) translateZ(0);
+  backface-visibility: hidden;
+  filter: blur(.0px);
+}
+
+.button_shape:hover {
+  transform: scale(1.04) perspective(1px) translateZ(0);
+  backface-visibility: hidden;
+  box-shadow: 4px 4px 4px #ff6f00;
+  filter: blur(.0px);
+}
+
+.button_big {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding: 7px 15px;
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 3px 3px #ff6f00;
+  font-size: 1.2em;
+  font-family: 'Silkscreen', sans-serif;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  transform: perspective(1px) translateZ(0);
+  backface-visibility: hidden;
+  filter: blur(.0px);
+  transform: scale(1.8);
+}
+
+.button_big:hover {
+  transform: scale(1.86) perspective(1px) translateZ(0);
+  backface-visibility: hidden;
+  box-shadow: 4px 4px 4px #ff6f00;
+  filter: blur(.0px);
+}
+
+
+.validation {
+  color: var(--color-dark);
+  font-family: 'Silkscreen', sans-serif;
+  font-size: 2.3em;
+  text-shadow: 2px 2px #ff6f00;
+  /* inline-size: 550px; */
+ 
+}
+
+.cubebg {
+  /* background-color: var(--color-light); */
+  transition-duration: 0.6s;
+}
+
+/* CSS singles  */
+.invis {
+  visibility: hidden;
+}
+
+.dark-mode {
+  --color-light: #22314E;
+  --color-dark: #FAF8D9;
+}
+
+.theme_toggle {}
+
+.jspace {
+  justify-content: space-evenly;
+}
+
+.jcenter {
+  justify-content: center;
+}
+
+.jright {
+  justify-content: right;
+}
+
+.jleft {
+  justify-content: left;
+}
+
+.acenter {
+  align-items: center;
+}
+.tcenter {
+  text-align: center;
+}
+.dmargin {
+  margin: 5px;
+}
+
+.dpadding {
+  padding: 5px;
+}
+
+.fixedw {
+  width: 500px;
+}
+.fixedh {
+  height: 500px;
+}
+
+.wordwrap {
+  inline-size: 840px; 
+   overflow-wrap: break-word;
+}
