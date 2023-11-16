@@ -145,6 +145,16 @@ h2.validation {
   font-weight: 700;
   text-shadow: 1.6px 1.6px 1.8px  #ff6f00;
   transition-duration: 0.3s;
+  /* width: 1200px; */
+}
+
+h2.info {
+  color: var(--color-dark);
+  font-size: 0.7em;
+  font-family: 'Chakra Petch';
+  font-weight: 700;
+  text-shadow: 1.6px 1.6px 1.8px  #ff6f00;
+  transition-duration: 0.3s;
 }
 
 h6 {
@@ -156,14 +166,14 @@ h6 {
 }
 
 span.pi {
-  font-size: 1.42em;
+  font-size: 1.5em;
    font-family: 'Chakra Petch';  
 }
 span.header {
   font-size: 1.42em;
 }
 span.button {
-  font-size: 1.2em;
+  /* font-size: 1.2em; */
   font-weight: bold;
 }
 span.ends {
@@ -209,6 +219,8 @@ img.jview {
   background-color: var(--color-dark);
   color: var(--color-light);
   padding: 7px 15px;
+  margin-left: 8px;
+  margin-right: 8px;
   border: none;
   border-radius: 25px;
   text-align: center;
@@ -256,14 +268,27 @@ img.jview {
   filter: blur(.0px);
 }
 
+button.info {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 
 .validation {
   color: var(--color-dark);
   font-family: 'Silkscreen', sans-serif;
   font-size: 2.3em;
-  text-shadow: 2px 2px #ff6f00;
+  text-shadow: 1.7px 1.7px 2px#ff6f00;
   /* inline-size: 550px; */
  
+}
+
+.info {
+  color: var(--color-dark);
+  font-family: 'Chakra Petch';
+  font-weight: 700;
+  text-shadow: 1.7px 1.7px 2px#ff6f00;
+  
 }
 
 .cubebg {
@@ -281,7 +306,7 @@ img.jview {
   --color-dark: #FAF8D9;
 }
 
-.theme_toggle {}
+
 
 .jspace {
   justify-content: space-evenly;
@@ -320,7 +345,11 @@ img.jview {
   height: 500px;
 }
 
+.validw {
+  width: 10px;;
+}
+
 .wordwrap {
-  inline-size: 840px; 
+  inline-size: 940px; 
    overflow-wrap: break-word;
 }

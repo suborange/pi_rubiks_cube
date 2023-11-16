@@ -1,17 +1,32 @@
 // get button to be pressed to call getInput()
 document.querySelector("#user_button").addEventListener("click", getInput); // need to split up scripts for html pages
+document.querySelector("#info").addEventListener("click", displayInfo);
 
 // get 10000 digits of pi for now
 const url ="https://uploadbeta.com/api/pi/?cached&n="
 
 let get_pits;
 
+function displayInfo() {
+    document.querySelector('#validation').innerHTML = `<h2 class=" info ">  
+    I wondered if a Rubik's cube can be solved through randomness and infinity.
+    <br><span class="pi ">&pi;</span> is an "infinite" decimal. So using all the digits of 0-9, 
+    I related them to a corresponding Rubik's cube rotation moves:
+    <br>The digit '3' relates to the 'Down' move notation for a Rubik's cube.
+    <br>The digit '4' relates to the 'Right' move notation, and so on for all digits.
+    <br>This project will go through all the <span class="pi ">&pi;</span> digits, one at a time, rotating the cube to the corresponding digit given.
+    The hope is to see if infinite randomness can end up solving a Rubik's cube someday.
+    This might take millions, to billions of digits, and soon an official website will be made to run this 24/7.
+    For now, this project runs locally, only for you to see, but I hope it interests and can entertain you until then!.
+    <br>Thanks for stopping by and checking it out!
+    </h2>`;
+}
+
 // create a function with a button
 async function getInput() {
   // validate input
   if(!inputIsValid()) {
-    // invalid input. make invisible
-    document.querySelector("#validation").className = "validation dmargin";
+    // invalid input. make invisible    
     document.querySelector("#getpi").innerHTML = "";
     return;
   }
@@ -76,7 +91,7 @@ async function fetchPi(url, digits){
   // get rid of the initial 0 and 3, start with 1415...
   pi = pi.substring(1);
   pi_first ="3"; // display 3, then decimal for
-  document.querySelector('#validation').innerHTML = `<h2 class=" validation dmargin  ">Scroll down to find out!</h2><span class="pi wordwrap">&pi;</span>: ${pi_first}.${pi.substring(1)}`;
+  document.querySelector('#validation').innerHTML = `<h2 class=" validation dmargin  ">Scroll down to find out!</h2><span class="pi ">&pi;</span>: ${pi_first}.${pi.substring(1)}`;
   console.log("pi: ".concat(pi));
   return pi; // return pi as a string, for substring
 
