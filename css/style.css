@@ -47,7 +47,13 @@ main.mbg {
 a {
   text-decoration: none;
   color: var(--color-dark);
-  /* transition-duration: 0.3s; */
+  transition-duration: 0.3s;
+}
+
+a.home:hover {
+  font-size: 1.12em;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 sup {
@@ -121,8 +127,8 @@ h1.title {
   /* font-family: 'Rubik Pixels'; */
   font-family: 'Silkscreen', sans-serif;
   text-shadow: 3px 3px 2.7px #ff6f00;
-  /* text-shadow: 2px 2px #5670a4; */
-  /* text-shadow: 2px 2px #b2b08a */
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 h2.subtitle {

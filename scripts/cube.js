@@ -717,6 +717,7 @@ function draw() {
         // check if at the end of the string? might be off by 1?
         if (start >= get_pits.length || end >= get_pits.length) {
             console.log("ending...");
+            document.querySelector("#current").innerHTML = `Completed going through ${start-1} digits of <span class="pi">&pi;</span>`;
             is_solving = false; // turn false, stop the rotation loop
             // noLoop(); // stop the draw function, should finish this until next draw
             // no luck solving within these digits. 
