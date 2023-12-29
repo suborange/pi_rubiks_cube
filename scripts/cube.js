@@ -42,9 +42,9 @@ let rgb = [
 var random_digits = [];
 for (let iran = 0; iran < 15; iran++) {
     var r = Math.floor(Math.random() * (8 - 2) + 2);
-  if (r != random_digits[iran-1]){ // if not duplicate to last number
-     random_digits.push(r);
-  }
+    if (r != random_digits[iran - 1]) { // if not duplicate to last number
+        random_digits.push(r);
+    }
 
 }
 console.log("random: ", random_digits);
@@ -274,7 +274,7 @@ function setup() {
 
     console.log(`get pits: | ${get_pits} |`);
 
-  document.querySelector("#display_digits").innerHTML = `${get_pits.length-2}`;
+    document.querySelector("#display_digits").innerHTML = `${get_pits.length - 2}`;
 
 
     // **** START CANVAS AND SETUP ****
@@ -406,6 +406,8 @@ function draw() {
     // camera controls for free rotation
     orbitControl(1, 1, 0, { freeRotation: true }); //ez pz
 
+    sketch.rotateX(sketch.frameCount * 0.001);
+    sketch.rotateZ(sketch.frameCount * 0.0011);
     // move.update();
 
 
@@ -424,11 +426,11 @@ function draw() {
     // is_solving = false;
     // scramble
     if (frameCount % 60 == 0 && scramble) {
-        
+
 
 
         // if finished scrambling, do it
-        if (index >= random_digits.length-1) {
+        if (index >= random_digits.length - 1) {
             scramble = false;
             prev_pit = 0; // reset for "solve"
         }
@@ -487,7 +489,7 @@ function draw() {
                 default:
                     // console.log("something went wrong here, #: ", curr_pit);
                     // is_solving = false;
-                    console.log("index:", index,"repeat, #: ", random_digits[index]);  
+                    console.log("index:", index, "repeat, #: ", random_digits[index]);
                     repeat = true;
                     break;
             }
@@ -548,7 +550,7 @@ function draw() {
                     repeat = false;
                     break;
                 default:
-                    console.log("index:", index,"repeat, #: ", random_digits[index]);
+                    console.log("index:", index, "repeat, #: ", random_digits[index]);
                     repeat = true; // repeat once?
                     // is_solving = false;
                     break;
@@ -717,7 +719,7 @@ function draw() {
         // check if at the end of the string? might be off by 1?
         if (start >= get_pits.length || end >= get_pits.length) {
             console.log("ending...");
-            document.querySelector("#current").innerHTML = `Completed going through ${start-1} digits of <span class="pi">&pi;</span>`;
+            document.querySelector("#current").innerHTML = `Completed going through ${start - 1} digits of <span class="pi">&pi;</span>`;
             is_solving = false; // turn false, stop the rotation loop
             // noLoop(); // stop the draw function, should finish this until next draw
             // no luck solving within these digits. 

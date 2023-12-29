@@ -26,6 +26,12 @@ body {
   transition-duration: 0.3s;
 }
 
+
+.dark-mode {
+  --color-light: #22314E;
+  --color-dark: #FAF8D9;
+}
+
 main {
   width: 100%;
 }
@@ -307,10 +313,6 @@ button.info {
   visibility: hidden;
 }
 
-.dark-mode {
-  --color-light: #22314E;
-  --color-dark: #FAF8D9;
-}
 
 
 
