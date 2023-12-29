@@ -406,8 +406,8 @@ function draw() {
     // camera controls for free rotation
     orbitControl(1, 1, 0, { freeRotation: true }); //ez pz
 
-    sketch.rotateX(sketch.frameCount * 0.001);
-    sketch.rotateZ(sketch.frameCount * 0.0011);
+    rotateX(frameCount * 0.001);
+    rotateZ(frameCount * 0.0011);
     // move.update();
 
 
